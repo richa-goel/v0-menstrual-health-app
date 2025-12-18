@@ -1,35 +1,70 @@
 "use client"
 
+import { useState } from "react"
+import HomeHeroCard from "./home-hero-card"
+import HomeTipsForDay from "./home-tips-for-day"
+import HomeTestimonials from "./home-testimonials"
+import DailyLogModal from "./daily-log-modal"
+import FuturePredictionModal from "./future-prediction-modal"
+
 interface HomePageProps {
   user: any
   onNavigate: (page: string) => void
 }
 
-import HomeQuickStats from "./home-quick-stats"
-import HomeQuickActions from "./home-quick-actions"
-import HomeInsights from "./home-insights"
-import HomeConditions from "./home-conditions"
-
 export default function HomePage({ user, onNavigate }: HomePageProps) {
+  const [showDailyLog, setShowDailyLog] = useState(false)
+  const [showFuturePrediction, setShowFuturePrediction] = useState(false)
+  const [selectedDate, setSelectedDate] = useState<Date>(new Date())
+
+  const handleDateClick = (date: Date) => {
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+    const clickedDate = new Date(date)
+    clickedDate.setHours(0, 0, 0, 0)
+
+    setSelectedDate(date)
+
+    if (clickedDate <= today) {
+      // Past or today - show daily log modal
+      setShowDailyLog(true)
+    } else {
+      // Future - show prediction modal
+      setShowFuturePrediction(true)
+    }
+  }
+
   return (
-    <div className="max-w-md mx-auto px-4 py-6 pb-28">
-      {/* Header */}
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-foreground">Welcome back</h1>
-        <p className="text-sm text-muted-foreground">{user?.name || "Friend"}</p>
-      </div>
+    <div className="max-w-md mx-auto pb-24">
+      <HomeHeroCard
+        user={user}
+        onLogClick={() => {
+          setSelectedDate(new Date())
+          setShowDailyLog(true)
+        }}
+        onNavigate={onNavigate}
+        onDateClick={handleDateClick}
+      />
 
-      {/* Quick Stats */}
-      <HomeQuickStats user={user} />
+      <HomeTipsForDay user={user} />
 
-      {/* Conditions */}
-      <HomeConditions user={user} />
+      <HomeTestimonials />
 
-      {/* Insights */}
-      <HomeInsights user={user} />
+      {showDailyLog && (
+        <DailyLogModal
+          selectedDate={selectedDate}
+          user={user}
+          onClose={() => setShowDailyLog(false)}
+          onSave={() => {
+            setShowDailyLog(false)
+            // Trigger refresh of data if needed
+          }}
+        />
+      )}
 
-      {/* Quick Actions */}
-      <HomeQuickActions onNavigate={onNavigate} />
+      {showFuturePrediction && (
+        <FuturePredictionModal selectedDate={selectedDate} user={user} onClose={() => setShowFuturePrediction(false)} />
+      )}
     </div>
   )
 }

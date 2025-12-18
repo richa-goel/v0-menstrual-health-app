@@ -4,104 +4,99 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  /* Updated to Saukhyam brand colors */
+  --background: oklch(0.99 0.005 106); /* Cream #fffff0 */
+  --foreground: oklch(0.35 0.01 255); /* Charcoal #4c555a */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.35 0.01 255);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
+  --popover-foreground: oklch(0.35 0.01 255);
+  --primary: oklch(0.48 0.18 145); /* Deep green #368241 */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.62 0.15 145); /* Medium green #55a363 */
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.97 0.005 106);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --accent: oklch(0.55 0.15 40); /* Rust orange #c15824 */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.45 0.22 25); /* Red #b4141c */
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.92 0.01 106);
+  --input: oklch(1 0 0);
+  --ring: oklch(0.48 0.18 145);
+  --chart-1: oklch(0.48 0.18 145);
+  --chart-2: oklch(0.62 0.15 145);
+  --chart-3: oklch(0.55 0.15 40);
+  --chart-4: oklch(0.45 0.22 25);
+  --chart-5: oklch(0.47 0.12 320); /* Purple #722062 */
+  --radius: 1rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.35 0.01 255);
+  --sidebar-primary: oklch(0.48 0.18 145);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.97 0.005 106);
+  --sidebar-accent-foreground: oklch(0.35 0.01 255);
+  --sidebar-border: oklch(0.92 0.01 106);
+  --sidebar-ring: oklch(0.48 0.18 145);
 }
 
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
+  --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
+  --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.685 0.186 343.56);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.736 0.158 26.35);
+  --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --accent: oklch(0.369 0 0);
   --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
+  --ring: oklch(0.685 0.186 343.56);
+  --chart-1: oklch(0.685 0.186 343.56);
+  --chart-2: oklch(0.736 0.158 26.35);
+  --chart-3: oklch(0.856 0.084 321.43);
+  --chart-4: oklch(0.769 0.188 70.08);
+  --chart-5: oklch(0.6 0.118 184.704);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.685 0.186 343.56);
+  --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --sidebar-ring: oklch(0.685 0.186 343.56);
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
+  --font-sans: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
 
-  /* Saukhyam Color Palette */
-  --color-primary: #368241;
-  --color-primary-light: #55a363;
-  --color-accent-warm: #c15824;
-  --color-accent-light: #fffff0;
-  --color-accent-red: #b4141c;
-  --color-accent-purple: #722062;
-  --color-neutral-dark: #4c555a;
+  /* Updated to Saukhyam brand color palette */
+  --color-green-deep: #368241;
+  --color-green-medium: #55a363;
+  --color-orange-rust: #c15824;
+  --color-cream: #fffff0;
+  --color-red: #b4141c;
+  --color-purple: #722062;
+  --color-charcoal: #4c555a;
+  --color-white: #ffffff;
+  --color-gray-light: #f5f5f5;
+
+  /* Gradient definitions using Saukhyam colors */
+  --gradient-green: linear-gradient(135deg, #368241 0%, #55a363 100%);
+  --gradient-green-orange: linear-gradient(135deg, #55a363 0%, #c15824 100%);
+  --gradient-purple-red: linear-gradient(135deg, #722062 0%, #b4141c 100%);
+  --gradient-cream: linear-gradient(135deg, #fffff0 0%, #f5f5f5 100%);
 
   /* Semantic Design Tokens */
-  --color-background: #ffffff;
-  --color-foreground: #1a1a1a;
-  --color-muted: #f5f5f5;
-  --color-muted-foreground: #666666;
-  --color-border: #e0e0e0;
-  --color-input: #ffffff;
-  --color-ring: #368241;
-
-  /* Component-specific tokens */
-  --color-success: #368241;
-  --color-warning: #c15824;
-  --color-danger: #b4141c;
-  --color-info: #55a363;
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -139,7 +134,8 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --radius: 0.5rem;
+  /* Increased border radius for more rounded look */
+  --radius: 1.25rem;
 }
 
 @layer base {
@@ -148,9 +144,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Added smooth font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv11";
   }
   html {
-    /* Added safe area support for notched devices */
     position: fixed;
     width: 100%;
     height: 100%;
@@ -167,73 +166,48 @@
   }
 }
 
-/* Utility classes for Saukhyam colors */
-.text-primary {
-  @apply text-[#368241];
-}
-.bg-primary {
-  @apply bg-[#368241];
-}
-.border-primary {
-  @apply border-[#368241];
-}
-
-.text-primary-light {
-  @apply text-[#55a363];
-}
-.bg-primary-light {
-  @apply bg-[#55a363];
-}
-
-.text-accent-warm {
-  @apply text-[#c15824];
-}
-.bg-accent-warm {
-  @apply bg-[#c15824];
-}
-
-.text-accent-red {
-  @apply text-[#b4141c];
-}
-.bg-accent-red {
-  @apply bg-[#b4141c];
-}
-
-.text-accent-purple {
-  @apply text-[#722062];
-}
-.bg-accent-purple {
-  @apply bg-[#722062];
-}
-
-.text-neutral-dark {
-  @apply text-[#4c555a];
-}
-.bg-neutral-dark {
-  @apply bg-[#4c555a];
-}
-
-/* Smooth transitions */
+/* Updated utility classes for Saukhyam brand gradients */
 @layer utilities {
+  .bg-gradient-green {
+    background: linear-gradient(135deg, #368241 0%, #55a363 100%);
+  }
+
+  .bg-gradient-green-orange {
+    background: linear-gradient(135deg, #55a363 0%, #c15824 100%);
+  }
+
+  .bg-gradient-purple-red {
+    background: linear-gradient(135deg, #722062 0%, #b4141c 100%);
+  }
+
+  .bg-gradient-cream {
+    background: linear-gradient(135deg, #fffff0 0%, #f5f5f5 100%);
+  }
+
+  .text-gradient-green {
+    background: linear-gradient(135deg, #368241 0%, #55a363 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-shadow-lg {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
   .transition-smooth {
     @apply transition-all duration-300 ease-in-out;
   }
 
-  /* Added mobile-specific utilities */
   .safe-area-inset-bottom {
     padding-bottom: max(1rem, env(safe-area-inset-bottom));
   }
 
   .safe-area-inset-top {
     padding-top: max(1rem, env(safe-area-inset-top));
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }

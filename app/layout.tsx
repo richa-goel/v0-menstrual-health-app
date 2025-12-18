@@ -1,10 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
-
-const geistSans = Geist({ subsets: ["latin"] })
-const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Saukhya - Menstrual Health Support",
@@ -30,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#368241" />
+        <meta name="theme-color" content="#FF69B4" />
         <meta name="mobile-web-app-capable" content="true" />
         <meta name="apple-mobile-web-app-capable" content="true" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -50,7 +46,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${geistSans.className} bg-background text-foreground`}>{children}</body>
+      <body className="bg-background text-foreground">{children}</body>
     </html>
   )
 }
